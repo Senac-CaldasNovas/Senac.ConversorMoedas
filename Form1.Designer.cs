@@ -34,21 +34,19 @@
             panel2 = new Panel();
             buttonConverter = new Button();
             panel4 = new Panel();
-            labelValorMoedaDestino = new Label();
-            txtBoxValorDestino = new TextBox();
+            textBoxValorDestino = new TextBox();
             panel6 = new Panel();
             comboBoxMoedaDestino = new ComboBox();
             pictureBoxImagemDestino = new PictureBox();
             label3 = new Label();
             panel3 = new Panel();
-            labelValorMoedaOrigem = new Label();
             textBoxValorOrigem = new TextBox();
             panel5 = new Panel();
             comboBoxMoedaOrigem = new ComboBox();
             label2 = new Label();
             pictureBoxImagemOrigem = new PictureBox();
             toolStrip1 = new ToolStrip();
-            toolStripLabel1 = new ToolStripLabel();
+            toolStripLabelValorMoedas = new ToolStripLabel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -100,35 +98,26 @@
             buttonConverter.Size = new Size(50, 50);
             buttonConverter.TabIndex = 2;
             buttonConverter.UseVisualStyleBackColor = true;
+            buttonConverter.Click += buttonConverter_Click;
             // 
             // panel4
             // 
             panel4.BackColor = Color.Gainsboro;
-            panel4.Controls.Add(labelValorMoedaDestino);
-            panel4.Controls.Add(txtBoxValorDestino);
+            panel4.Controls.Add(textBoxValorDestino);
             panel4.Controls.Add(panel6);
             panel4.Location = new Point(488, 78);
             panel4.Name = "panel4";
             panel4.Size = new Size(300, 250);
             panel4.TabIndex = 1;
             // 
-            // labelValorMoedaDestino
+            // textBoxValorDestino
             // 
-            labelValorMoedaDestino.AutoSize = true;
-            labelValorMoedaDestino.ForeColor = Color.DimGray;
-            labelValorMoedaDestino.Location = new Point(16, 223);
-            labelValorMoedaDestino.Name = "labelValorMoedaDestino";
-            labelValorMoedaDestino.Size = new Size(38, 15);
-            labelValorMoedaDestino.TabIndex = 3;
-            labelValorMoedaDestino.Text = "label5";
-            // 
-            // txtBoxValorDestino
-            // 
-            txtBoxValorDestino.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtBoxValorDestino.Location = new Point(16, 121);
-            txtBoxValorDestino.Name = "txtBoxValorDestino";
-            txtBoxValorDestino.Size = new Size(269, 29);
-            txtBoxValorDestino.TabIndex = 3;
+            textBoxValorDestino.Enabled = false;
+            textBoxValorDestino.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            textBoxValorDestino.Location = new Point(16, 121);
+            textBoxValorDestino.Name = "textBoxValorDestino";
+            textBoxValorDestino.Size = new Size(269, 29);
+            textBoxValorDestino.TabIndex = 3;
             // 
             // panel6
             // 
@@ -174,23 +163,12 @@
             // panel3
             // 
             panel3.BackColor = Color.Gainsboro;
-            panel3.Controls.Add(labelValorMoedaOrigem);
             panel3.Controls.Add(textBoxValorOrigem);
             panel3.Controls.Add(panel5);
             panel3.Location = new Point(12, 78);
             panel3.Name = "panel3";
             panel3.Size = new Size(300, 250);
             panel3.TabIndex = 0;
-            // 
-            // labelValorMoedaOrigem
-            // 
-            labelValorMoedaOrigem.AutoSize = true;
-            labelValorMoedaOrigem.ForeColor = Color.DimGray;
-            labelValorMoedaOrigem.Location = new Point(17, 223);
-            labelValorMoedaOrigem.Name = "labelValorMoedaOrigem";
-            labelValorMoedaOrigem.Size = new Size(38, 15);
-            labelValorMoedaOrigem.TabIndex = 2;
-            labelValorMoedaOrigem.Text = "label4";
             // 
             // textBoxValorOrigem
             // 
@@ -245,18 +223,18 @@
             // toolStrip1
             // 
             toolStrip1.Dock = DockStyle.Bottom;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripLabel1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripLabelValorMoedas });
             toolStrip1.Location = new Point(0, 425);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
+            // toolStripLabelValorMoedas
             // 
-            toolStripLabel1.Name = "toolStripLabel1";
-            toolStripLabel1.Size = new Size(86, 22);
-            toolStripLabel1.Text = "toolStripLabel1";
+            toolStripLabelValorMoedas.Name = "toolStripLabelValorMoedas";
+            toolStripLabelValorMoedas.Size = new Size(12, 22);
+            toolStripLabelValorMoedas.Text = "-";
             // 
             // Form1
             // 
@@ -305,9 +283,9 @@
         private PictureBox pictureBoxImagemOrigem;
         private Button buttonConverter;
         private Label labelValorMoedaDestino;
-        private TextBox txtBoxValorDestino;
+        private TextBox textBoxValorDestino;
         private Label labelValorMoedaOrigem;
         private TextBox textBoxValorOrigem;
-        private ToolStripLabel toolStripLabel1;
+        private ToolStripLabel toolStripLabelValorMoedas;
     }
 }
